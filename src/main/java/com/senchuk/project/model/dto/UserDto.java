@@ -1,5 +1,6 @@
 package com.senchuk.project.model.dto;
 
+//FIXME use model pattern instead of DTO (DRY)
 
 public class UserDto {
 
@@ -10,6 +11,8 @@ public class UserDto {
     public String getName() {
         return name;
     }
+
+    //FIXME remove unnecessary methods (YAGNI)
 
     public void setName(String name) {
         this.name = name;

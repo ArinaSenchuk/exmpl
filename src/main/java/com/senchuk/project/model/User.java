@@ -10,11 +10,15 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 public class User {
 
+    //FIXME use UUID instead of long for ids
+
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private long id;
 
     private String name;
+
+    //FIXME remove unnecessary methods (YAGNI)
 
     public String getName() {
         return name;

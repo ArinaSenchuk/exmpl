@@ -14,17 +14,29 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	//FIXME need this config here
+	
+	annotationProcessor("org.projectlombok:lombok")
+
+	//FIXME there are no thymeleafs in the project
+
+//	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	
 	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
 	compile("io.springfox:springfox-swagger2:2.6.1")
 	compile("io.springfox:springfox-swagger-ui:2.6.1")
 
 	compileOnly "org.projectlombok:lombok:1.16.16"
-	
+
+
+	//FIXME starters should be at the top
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	
-	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+
+	//FIXME is this dependency really necessary?
+
+//	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'org.postgresql:postgresql'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

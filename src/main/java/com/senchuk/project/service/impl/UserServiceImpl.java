@@ -7,10 +7,13 @@ import com.senchuk.project.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
+//FIXME remove extend from RuntimeException
+//FIXME UserEntity should be converted everywhere
 
 @Service
 public class UserServiceImpl extends RuntimeException implements UserService  {
+
+    //FIXME @Autowired should be only via constructors
 
     @Autowired
     private UserRepository userRepository;
@@ -22,6 +25,9 @@ public class UserServiceImpl extends RuntimeException implements UserService  {
 
     @Override
     public void deleteUser(Long id) {
+
+        //FIXME need to format code (add spaces, else after { etc)
+        //FIXME change logic
 
         if(userRepository.findById(id).isPresent()) {
             userRepository.deleteById(id);
@@ -38,6 +44,10 @@ public class UserServiceImpl extends RuntimeException implements UserService  {
 
     @Override
     public void updateUser(User user) {
+
+        //FIXME need to format code (add spaces, else after { etc)
+        //FIXME change logic
+
         if(userRepository.findById(user.getId()).isPresent()) {
             userRepository.save(user);
         }

@@ -10,6 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @AutoConfigureMockMvc
 public class ProjectApplicationTests {
 
+	//FIXME remove contextLoads test
+
 	@Test
 	public void contextLoads() {
 	}
