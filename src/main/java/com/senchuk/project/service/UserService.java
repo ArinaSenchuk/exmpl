@@ -5,6 +5,8 @@ import com.senchuk.project.model.User;
 
 public interface UserService {
 
+    //FIXME add return values according to new controller requirements
+
     void createUser(User user);
 
     void deleteUser(Long id);
